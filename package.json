@@ -1,0 +1,21 @@
+{
+  "name": "bot-passport-checker",
+  "version": "1.0.0",
+  "description": "Bot Messenger OpenTravel - Vérifie la puissance de votre passeport et partagez le résultat sur Facebook",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.53",
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "i18n-iso-countries": "^7.13.0",
+    "roboto-fontface": "^0.10.0",
+    "string-similarity": "^4.0.4"
+  }
+}

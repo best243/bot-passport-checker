@@ -1,0 +1,93 @@
+{
+  "_comment": "Données de démonstration utilisées si RAPIDAPI_KEY n'est pas configurée ou si l'API externe est indisponible. Valeurs approximatives, à but de test uniquement.",
+  "CI": {
+    "rank": 96,
+    "totalDestinations": 199,
+    "visaFree": 50,
+    "visaOnArrival": 23,
+    "eVisa": 18,
+    "visaRequired": 108,
+    "topDestinations": ["Sénégal", "Bénin", "Togo", "Kenya", "Maroc"]
+  },
+  "SN": {
+    "rank": 90,
+    "totalDestinations": 199,
+    "visaFree": 54,
+    "visaOnArrival": 24,
+    "eVisa": 17,
+    "visaRequired": 104,
+    "topDestinations": ["Côte d'Ivoire", "Bénin", "Maroc", "Kenya", "Singapour"]
+  },
+  "CM": {
+    "rank": 100,
+    "totalDestinations": 199,
+    "visaFree": 47,
+    "visaOnArrival": 22,
+    "eVisa": 17,
+    "visaRequired": 113,
+    "topDestinations": ["Bénin", "Kenya", "Maroc", "Sénégal", "Rwanda"]
+  },
+  "ML": {
+    "rank": 98,
+    "totalDestinations": 199,
+    "visaFree": 48,
+    "visaOnArrival": 23,
+    "eVisa": 17,
+    "visaRequired": 111,
+    "topDestinations": ["Sénégal", "Bénin", "Togo", "Kenya", "Maroc"]
+  },
+  "NG": {
+    "rank": 95,
+    "totalDestinations": 199,
+    "visaFree": 46,
+    "visaOnArrival": 25,
+    "eVisa": 19,
+    "visaRequired": 109,
+    "topDestinations": ["Ghana", "Bénin", "Kenya", "Rwanda", "Singapour"]
+  },
+  "BJ": {
+    "rank": 94,
+    "totalDestinations": 199,
+    "visaFree": 52,
+    "visaOnArrival": 24,
+    "eVisa": 17,
+    "visaRequired": 106,
+    "topDestinations": ["Côte d'Ivoire", "Sénégal", "Togo", "Kenya", "Maroc"]
+  },
+  "MA": {
+    "rank": 70,
+    "totalDestinations": 199,
+    "visaFree": 70,
+    "visaOnArrival": 20,
+    "eVisa": 16,
+    "visaRequired": 93,
+    "topDestinations": ["Sénégal", "Côte d'Ivoire", "Bénin", "Turquie", "Singapour"]
+  },
+  "FR": {
+    "rank": 4,
+    "totalDestinations": 199,
+    "visaFree": 148,
+    "visaOnArrival": 24,
+    "eVisa": 25,
+    "visaRequired": 2,
+    "topDestinations": ["Canada", "Japon", "Singapour", "Allemagne", "Brésil"]
+  },
+  "CA": {
+    "rank": 7,
+    "totalDestinations": 199,
+    "visaFree": 142,
+    "visaOnArrival": 26,
+    "eVisa": 27,
+    "visaRequired": 4,
+    "topDestinations": ["France", "Japon", "Singapour", "Allemagne", "Brésil"]
+  },
+  "US": {
+    "rank": 8,
+    "totalDestinations": 199,
+    "visaFree": 145,
+    "visaOnArrival": 22,
+    "eVisa": 27,
+    "visaRequired": 5,
+    "topDestinations": ["France", "Japon", "Canada", "Allemagne", "Brésil"]
+  }
+}

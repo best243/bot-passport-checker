@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: opentravel-passport-checker
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PAGE_ACCESS_TOKEN
+        sync: false
+      - key: VERIFY_TOKEN
+        sync: false
+      # URL publique du service — correspond au nom ci-dessus par défaut.
+      # Si tu renommes le service, mets à jour cette valeur dans Render.
+      - key: BASE_URL
+        value: https://opentravel-passport-checker.onrender.com
+      - key: RAPIDAPI_KEY
+        sync: false
+      - key: RAPIDAPI_HOST
+        sync: false
+      - key: RAPIDAPI_PASSPORT_PATH
+        value: /passport/{code}
