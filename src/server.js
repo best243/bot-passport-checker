@@ -32,6 +32,7 @@ app.get("/webhook", (req, res) => {
 // ── Réception des événements Messenger ────────────────────────
 app.post("/webhook", async (req, res) => {
   const body = req.body;
+  console.log("[webhook] reçu :", JSON.stringify(body));
 
   if (body.object !== "page") return res.sendStatus(404);
 
