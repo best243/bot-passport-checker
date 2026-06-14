@@ -17,6 +17,11 @@ const BASE_URL = (process.env.BASE_URL || "").replace(/\/$/, "");
 // Sert les images générées (infographies de résultat)
 app.use("/generated", express.static(path.join(__dirname, "..", "public", "generated")));
 
+// Sert l'icône de l'app (revue Meta)
+app.get("/app-icon-1024.png", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "public", "app-icon-1024.png"));
+});
+
 // ── Vérification du webhook (Meta) ────────────────────────────
 app.get("/webhook", (req, res) => {
   const mode = req.query["hub.mode"];
