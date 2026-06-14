@@ -32,7 +32,6 @@ app.get("/webhook", (req, res) => {
 // ── Réception des événements Messenger ────────────────────────
 app.post("/webhook", async (req, res) => {
   const body = req.body;
-  console.log("[webhook] reçu :", JSON.stringify(body));
 
   if (body.object !== "page") return res.sendStatus(404);
 
@@ -91,6 +90,82 @@ app.get("/share/:code/:filename", (req, res) => {
 
 app.get("/", (req, res) => {
   res.send("OpenTravel Passport Power Checker — OK");
+});
+
+// ── Politique de confidentialité (requise pour la revue Meta) ─
+app.get("/privacy", (req, res) => {
+  res.send(`<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Politique de confidentialité - OpenTravel Passport Power Checker</title>
+  <style>
+    body { font-family: -apple-system, Arial, sans-serif; background:#0d0d0d; color:#eee; max-width:720px; margin:0 auto; padding:40px 20px; line-height:1.6; }
+    h1, h2 { color:#c8a84b; }
+    a { color:#c8a84b; }
+  </style>
+</head>
+<body>
+  <h1>Politique de confidentialité</h1>
+  <p>Dernière mise à jour : 2026.</p>
+
+  <p>
+    Le bot Messenger <strong>"Passport Power Checker"</strong> de la page Facebook
+    <strong>OpenTravel</strong> permet à un utilisateur d'indiquer une nationalité
+    et de recevoir en retour une infographie indiquant le nombre de pays
+    accessibles avec ce passeport (sans visa, eVisa, visa à l'arrivée, visa requis).
+  </p>
+
+  <h2>1. Données collectées</h2>
+  <p>
+    Lorsque vous utilisez ce bot via Messenger, nous recevons :
+  </p>
+  <ul>
+    <li>Votre identifiant Messenger (PSID), fourni automatiquement par la plateforme Messenger pour permettre la conversation.</li>
+    <li>Le texte des messages que vous envoyez au bot (ex : le nom d'un pays).</li>
+  </ul>
+  <p>
+    Nous ne demandons et ne collectons aucune autre information personnelle
+    (pas de nom, email, numéro de téléphone, localisation précise, etc.).
+  </p>
+
+  <h2>2. Utilisation des données</h2>
+  <p>
+    Ces données sont utilisées uniquement pour :
+  </p>
+  <ul>
+    <li>Répondre à votre demande (générer l'infographie correspondant au pays indiqué).</li>
+    <li>Tenir un journal statistique anonyme et agrégé des pays les plus demandés, afin d'améliorer le service.</li>
+  </ul>
+  <p>
+    Aucune donnée n'est vendue, partagée avec des tiers à des fins publicitaires,
+    ou utilisée pour vous profiler.
+  </p>
+
+  <h2>3. Conservation des données</h2>
+  <p>
+    Les journaux de requêtes sont conservés de façon limitée (les entrées les
+    plus anciennes sont automatiquement supprimées) et ne contiennent pas
+    d'information permettant de vous identifier personnellement au-delà de
+    votre identifiant Messenger.
+  </p>
+
+  <h2>4. Vos droits</h2>
+  <p>
+    Vous pouvez à tout moment arrêter d'utiliser le bot en ne lui envoyant
+    plus de messages. Pour toute question concernant vos données ou pour
+    demander leur suppression, contactez-nous via la messagerie de la page
+    Facebook <a href="https://www.facebook.com/profile.php?id=100063685734695">OpenTravel</a>.
+  </p>
+
+  <h2>5. Contact</h2>
+  <p>
+    Pour toute question relative à cette politique de confidentialité,
+    contactez-nous via la page Facebook OpenTravel.
+  </p>
+</body>
+</html>`);
 });
 
 app.listen(PORT, () => {
